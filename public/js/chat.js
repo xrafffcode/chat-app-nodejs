@@ -17,7 +17,7 @@ const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true }
 
 const autoscroll = () => {
     let chatWrapper = document.querySelector('#chat-messages');
-    chatWrapper.scrollTo(0, chatWrapper.offsetHeight);
+    chatWrapper.scrollTo(0, chatWrapper.scrollHeight);
 }
 
 socket.on('message', (message) => {
